@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'simple_form'
-
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -62,4 +60,6 @@ source 'https://rails-assets.org' do
 end
 
 gem 'kaminari'
+gem 'simple_form'
 gem 'font-awesome-rails'
+gem 'devise'

@@ -64,12 +64,15 @@
 
 <div class="clear"></div>
 
-<div class="booyah-box col-10 offset-1">
-  <% @place.photos.each do |photo| %>
-    <div class="photo"><%= image_tag photo.picture %></div>
-    <div><%= photo.caption %></div>
-  <% end %>
-</div>
+
+<% if @place.photos.present? %>
+  <div class="booyah-box col-10 offset-1">
+    <% @place.photos.each do |photo| %>
+      <div class="photo"><%= image_tag photo.picture %></div>
+      <div><%= photo.caption %></div>
+    <% end %>
+  </div>
+<% end %>
 
 <div class="col-10 offset-1"
   <h1 class="float-left">Comments</h1>
